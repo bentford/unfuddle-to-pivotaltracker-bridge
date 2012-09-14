@@ -11,7 +11,7 @@ $xml = simplexml_load_string($request_xml);
 
 
 $matches = array();
-preg_match('/story\s*:\s*(\d*)(.*)/i', $xml->message, $matches);
+preg_match('/story\s*:\s*(\d*)\s*(.*)/i', $xml->message, $matches);
 
 $storyId =  $matches[1];
 $notes = $matches[2];
